@@ -9,7 +9,7 @@ function AddTodo({ onAddList }) {
 		onAddList({
 			id: uuid(),
 			text: inputText,
-			status: 'active',
+			status: '진행중',
 		})
 	}
 	return (
@@ -35,6 +35,7 @@ const Input = styled.input`
 	outline: none;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
+	color: #f57f17;
 `
 const Btn = styled.button`
 	background-color: var(--color-accent);

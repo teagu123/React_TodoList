@@ -3,14 +3,14 @@ import styled from 'styled-components'
 function Todo({ todo, onUpdateList, onDeleteList }) {
 	const { text, status } = todo
 	const onCheckBox = e => {
-		onUpdateList({ ...todo, status: e.target.checked ? 'completed' : 'active' })
+		onUpdateList({ ...todo, status: e.target.checked ? '진행완료' : '진행중' })
 	}
 	const onDelete = () => onDeleteList(todo)
 	return (
 		<Li>
 			<Input
 				type="checkbox"
-				checked={status === 'completed'}
+				checked={status === '진행완료'}
 				onChange={onCheckBox}
 			/>
 			<Label>{text}</Label>
